@@ -5,7 +5,8 @@ import javax.swing.*;
 public class MultipleJPanels extends JFrame
 	{
 	private static final long serialVersionUID = 1L;
-	static String name, class;
+	static String name; 
+	static String className;
 
 	public static void main(String[] args)
 		{
@@ -72,12 +73,31 @@ public class MultipleJPanels extends JFrame
 					{
 					public void actionPerformed(ActionEvent arg0) 
 						{
-						class = dropdown.getSelectedItem();
+						className = dropdown.getSelectedItem().toString();
 						//System.out.println(dropdown.getSelectedIndex());
+						System.out.println("Your className is " + className);
 						
 						}
 					});
 			frame.setVisible(true);
+			switch(className)
+				{
+				case "Druid":
+					{
+					System.out.println("Ah, I love Nature as well - God's first Bible!");
+					break;
+					}
+				case "Ranger":
+					{
+					System.out.println("Ah, another Aragorn wannabe, eh?");
+					break;
+					}
+				case "Monk":
+					{
+					System.out.println("If I had to do it all over again... Trappist monk...");
+					break;
+					}
+				}
 
 			}
 	}
