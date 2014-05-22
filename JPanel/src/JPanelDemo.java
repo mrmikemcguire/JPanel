@@ -1,10 +1,12 @@
 import java.awt.*;
 import java.awt.event.*;
+
 import javax.swing.*;
 
 public class JPanelDemo extends JFrame
 	{
 	private static final long serialVersionUID = 1L;
+	static String variable;
 
 	public static void main(String[] args)
 		{
@@ -32,11 +34,27 @@ public class JPanelDemo extends JFrame
 				{
 				public void actionPerformed(ActionEvent arg0) 
 					{
-					System.out.println(dropdown.getSelectedItem());
-					System.out.println(dropdown.getSelectedIndex());
+					//System.out.println(dropdown.getSelectedItem());
+					variable = dropdown.getSelectedItem().toString();
+					System.out.println("The variable is " + variable);
 					System.out.println(txtfield.getText());
 					}
 				});
+		}
+		public static final String[] pizzas = { "Cheese", "Pepperoni", "Sausage", "Veggie" };
+
+			{
+			final JFrame frame = new JFrame("JFrame Name");
+		    String favoritePizza = (String) JOptionPane.showInputDialog(frame, 
+		            "What is your favorite pizza?",
+		            "Favorite Pizza",
+		            JOptionPane.QUESTION_MESSAGE, 
+		            null, 
+		            pizzas, 
+		            pizzas[0]);
+
+		        // favoritePizza will be null if the user clicks Cancel
+		        System.out.printf("Favorite pizza is %s.\n", favoritePizza);
 		frame.setVisible(true);
 		}
 	}

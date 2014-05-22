@@ -1,5 +1,6 @@
 import java.awt.*;
 import java.awt.event.*;
+
 import javax.swing.*;
 
 public class JOptionPaneDemo extends JFrame
@@ -13,12 +14,14 @@ public class JOptionPaneDemo extends JFrame
 	    {
 		name = JOptionPane.showInputDialog("What is your name?");  
 		JOptionPane.showMessageDialog(frame, "Hi, " + name);
+		
 		Object[] options = {"Druid", "Ranger", "Monk"};
 		className = JOptionPane.showOptionDialog(frame, "What class would you like to be?",
 				"Your Vocation",
 				JOptionPane.YES_NO_CANCEL_OPTION,
 				JOptionPane.QUESTION_MESSAGE,
 				null, options, options[2]);
+		 
 		
 		switch(className)
 			{
@@ -38,5 +41,20 @@ public class JOptionPaneDemo extends JFrame
 				break;
 				}
 			}
+		final String[] genre = { "Dungeon", "Wilderness", "Sci-Fi", "Random" };
+
+			{
+			final JFrame frame = new JFrame();
+		    String favoritePizza = (String) JOptionPane.showInputDialog(frame, 
+		            "What type of adventure would you like to experience?",
+		            "Adventure Genre",
+		            JOptionPane.QUESTION_MESSAGE, 
+		            null, 
+		            genre, 
+		            genre[0]);
+		    JOptionPane.showMessageDialog(frame, "Oh dear, you have no idea what you've just done...");
+
+
+		      }
 	    }
 	}
