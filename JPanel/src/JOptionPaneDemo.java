@@ -45,7 +45,7 @@ public class JOptionPaneDemo extends JFrame
 
 			{
 			final JFrame frame = new JFrame();
-		    String favoritePizza = (String) JOptionPane.showInputDialog(frame, 
+		    String adventureType = (String) JOptionPane.showInputDialog(frame, 
 		            "What type of adventure would you like to experience?",
 		            "Adventure Genre",
 		            JOptionPane.QUESTION_MESSAGE, 
