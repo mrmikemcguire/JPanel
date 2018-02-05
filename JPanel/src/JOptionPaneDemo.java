@@ -1,6 +1,5 @@
 import java.awt.*;
 import java.awt.event.*;
-
 import javax.swing.*;
 
 public class JOptionPaneDemo extends JFrame
@@ -12,9 +11,13 @@ public class JOptionPaneDemo extends JFrame
 
 	public static void main(String[] args)
 	    {
+	    //takes input
 		name = JOptionPane.showInputDialog("What is your name?");  
+		
+		//responds to input above
 		JOptionPane.showMessageDialog(frame, "Hi, " + name);
 		
+		//buttons
 		Object[] options = {"Druid", "Ranger", "Monk"};
 		className = JOptionPane.showOptionDialog(frame, "What class would you like to be?",
 				"Your Vocation",
@@ -22,7 +25,7 @@ public class JOptionPaneDemo extends JFrame
 				JOptionPane.QUESTION_MESSAGE,
 				null, options, options[2]);
 		 
-		
+		//responds to button choice above
 		switch(className)
 			{
 			case 0:
@@ -41,20 +44,19 @@ public class JOptionPaneDemo extends JFrame
 				break;
 				}
 			}
+		
+		//drop-down menu
 		final String[] genre = { "Dungeon", "Wilderness", "Sci-Fi", "Random" };
-
-			{
-			final JFrame frame = new JFrame();
-		    String adventureType = (String) JOptionPane.showInputDialog(frame, 
-		            "What type of adventure would you like to experience?",
-		            "Adventure Genre",
-		            JOptionPane.QUESTION_MESSAGE, 
-		            null, 
-		            genre, 
-		            genre[0]);
-		    JOptionPane.showMessageDialog(frame, "Oh dear, you have no idea what you've just done...");
-
-
-		      }
+		final JFrame frame = new JFrame();
+	    String adventureType = (String) JOptionPane.showInputDialog(frame, 
+	            "What type of adventure would you like to experience?",
+	            "Adventure Genre",
+	            JOptionPane.QUESTION_MESSAGE, 
+	            null, 
+	            genre, 
+	            genre[0]);
+	    
+	    //generic response to drop-down choice above
+	    JOptionPane.showMessageDialog(frame, "Oh dear, you have no idea what you've just done...");    
 	    }
 	}
