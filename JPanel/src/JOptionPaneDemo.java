@@ -12,40 +12,50 @@ public class JOptionPaneDemo extends JFrame
 	public static void main(String[] args)
 	    {
 	    //takes input
-		name = JOptionPane.showInputDialog("What is your name?");  
-		
-		//responds to input above
-		JOptionPane.showMessageDialog(frame, "Hi, " + name);
+		name = JOptionPane.showInputDialog(
+				"What is your name?");  
+		JOptionPane.showMessageDialog(
+				frame, 
+				"Hi, " + name);
 		
 		//buttons
 		Object[] options = {"Druid", "Ranger", "Monk"};
-		className = JOptionPane.showOptionDialog(frame, "What class would you like to be?",
+		className = JOptionPane.showOptionDialog(
+				frame, 
+				"What class would you like to be?",
 				"Your Vocation",
 				JOptionPane.YES_NO_CANCEL_OPTION,
 				JOptionPane.QUESTION_MESSAGE,
-				null, options, options[2]);
+				null, 
+				options, 
+				options[2]);
 		 
 		//responds to button choice above
 		switch(className)
 			{
 			case 0:
 				{
-				JOptionPane.showMessageDialog(frame, "Ah, a nature lover...God's first Bible...");
+				JOptionPane.showMessageDialog(
+						frame, 
+						"Ah, a nature lover...God's first Bible...");
 				break;
 				}
 			case 1:
 				{
-				JOptionPane.showMessageDialog(frame, "Ah, another Aragorn wannabe, eh?");
+				JOptionPane.showMessageDialog(
+						frame, 
+						"Ah, another Aragorn wannabe, eh?");
 				break;
 				}
 			case 2:
 				{
-				JOptionPane.showMessageDialog(frame, "If I had to do it all over again... Trappist monk...");
+				JOptionPane.showMessageDialog(
+						frame, 
+						"If I had to do it all over again... Trappist monk...");
 				break;
 				}
 			}
-		
-		//drop-down menu
+		// drop-down menu
 		final String[] genre = { "Dungeon", "Wilderness", "Sci-Fi", "Random" };
 		final JFrame frame = new JFrame();
 	    String adventureType = (String) JOptionPane.showInputDialog(frame, 
@@ -57,6 +67,9 @@ public class JOptionPaneDemo extends JFrame
 	            genre[0]);
 	    
 	    //generic response to drop-down choice above
-	    JOptionPane.showMessageDialog(frame, "Oh dear, you have no idea what you've just done...");    
+	    JOptionPane.showMessageDialog(
+	    		frame, 
+	    		"Oh dear, you have no idea what you've just done...");    
+		      }
 	    }
-	}
+	
