@@ -28,7 +28,7 @@ public class JOptionPaneDemo extends JFrame
 				JOptionPane.QUESTION_MESSAGE,
 				null, 
 				options, 
-				options[2]);
+				options[2]);  //makes third option the default
 		 
 		//responds to button choice above
 		switch(className)
@@ -55,6 +55,7 @@ public class JOptionPaneDemo extends JFrame
 				break;
 				}
 			}
+		
 		// drop-down menu
 		final String[] genre = { "Dungeon", "Wilderness", "Sci-Fi", "Random" };
 		final JFrame frame = new JFrame();
